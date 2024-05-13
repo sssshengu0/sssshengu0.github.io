@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品数据录入与展示</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <div class="module-1">
+        <table>
+          <thead>
+            <tr>
+              <th>商品名称</th>
+              <th>成本价格（元）</th>
+              <th>重量（g）</th>
+              <th>扫码价格（元）</th>
+              <th>预留功能</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>牛杂面</td>
+              <td>6.74</td>
+              <td>400</td>
+              <td>19.8</td>
+              <td><input type="text" value="0" readonly></td>
+              <td><button class="modify-btn">修改</button><button class="complete-btn" style="display:none;">完成</button></td>
+            </tr>
+            <tr>
+              <td>牛杂粉</td>
+              <td>6.84</td>
+              <td>400</td>
+              <td>19.8</td>
+              <td><input type="text" value="0" readonly></td>
+              <td><button class="modify-btn">修改</button><button class="complete-btn" style="display:none;">完成</button></td>
+            </tr>
+            <tr>
+              <td>牛肉面</td>
+              <td>6.74</td>
+              <td>400</td>
+              <td>21.8</td>
+              <td><input type="text" value="0" readonly></td>
+              <td><button class="modify-btn">修改</button><button class="complete-btn" style="display:none;">完成</button></td>
+            </tr>
+            <tr>
+              <td>牛肉粉</td>
+              <td>6.84</td>
+              <td>400</td>
+              <td>21.8</td>
+              <td><input type="text" value="0" readonly></td>
+              <td><button class="modify-btn">修改</button><button class="complete-btn" style="display:none;">完成</button></td>
+            </tr>
+            <tr>
+              <td>海带面</td>
+              <td>4</td>
+              <td>200</td>
+              <td>12.8</td>
+              <td><input type="text" value="0" readonly></td>
+              <td><button class="modify-btn">修改</button><button class="complete-btn" style="display:none;">完成</button></td>
+            </tr>
+            <tr>
+              <td>海带粉</td>
+              <td>4</td>
+              <td>200</td>
+              <td>12.8</td>
+              <td><input type="text" value="0" readonly></td>
+              <td><button class="modify-btn">修改</button><button class="complete-btn" style="display:none;">完成</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="module-2">
+        <table>
+          <tr>
+            <td><span>0</span>牛杂面</td>
+            <td><input type="range" min="0" max="12" value="0" class="slider"></td>
+          </tr>
+          <tr>
+            <td><span>0</span>牛杂粉</td>
+            <td><input type="range" min="0" max="12" value="0" class="slider"></td>
+          </tr>
+          <tr>
+            <td><span>0</span>牛肉面</td>
+            <td><input type="range" min="0" max="12" value="0" class="slider"></td>
+          </tr>
+          <tr>
+            <td><span>0</span>牛肉粉</td>
+            <td><input type="range" min="0" max="12" value="0" class="slider"></td>
+          </tr>
+          <tr>
+            <td><span>0</span>海带面</td>
+            <td><input type="range" min="0" max="12" value="0" class="slider"></td>
+          </tr>
+          <tr>
+            <td><span>0</span>海带粉</td>
+            <td><input type="range" min="0" max="12" value="0" class="slider"></td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="module-3">
+        <table>
+          <thead>
+            <tr>
+              <th>商品组合内容</th>
+              <th>配置总成本</th>
+              <th>配置总重量</th>
+              <th>配置总扫码价</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <button id="record-btn">记录</button>
+        <button id="reset-btn">重置</button>
+        <br>
+        <br>
+        <table class="parameter-table">
+        <thead>
+          <tr>
+            <th>参数输入</th>
+            <th>参数说明</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" id="promotion-input" value="15%"></td>
+            <td>大促让利的参数设置</td>
+            <td><button id="set-promotion-btn">设置</button></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    
+    <div class="right-section">
+    <div class="product-combination-container">
+      <div class="product-combination"></div>
+    </div>
+  </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>事件标题在这里</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+  <div class="container">
+    <div class="event-container">
+      <div class="event-list ongoing-list"></div>
+      <div class="event-list completed-list"></div>
+    </div>
+    <div class="footer">
+      <div class="tab active" data-tab="ongoing">正进行</div>
+      <button id="actionBtn">+</button>
+      <div class="tab" data-tab="completed">已完成</div>
+    </div>
+  </div>
+
+  <div class="modal" id="newEventModal">
+    <div class="modal-content">
+      <h2>添加新的事件内容</h2>
+      <textarea id="eventContent" rows="4" placeholder="取第一行为标题,剩下的为内容"></textarea>
+      <div class="modal-buttons">
+        <button id="cancelBtn">取消</button>
+        <button id="confirmBtn">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="dataUtils.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

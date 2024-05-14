@@ -46,6 +46,17 @@ function renderEvents() {
       ongoingList.appendChild(eventElement);
     }
   });
+
+  // 根据当前选项卡显示相应的事件列表
+  const activeTab = document.querySelector('.tab.active');
+  const tabName = activeTab.dataset.tab;
+  if (tabName === 'ongoing') {
+    ongoingList.style.display = 'block';
+    completedList.style.display = 'none';
+  } else if (tabName === 'completed') {
+    ongoingList.style.display = 'none';
+    completedList.style.display = 'block';
+  }
 }
 
 // 切换选项卡
@@ -63,7 +74,7 @@ function switchTab(tab) {
   } else if (tabName === 'completed') {
     ongoingList.style.display = 'none';
     completedList.style.display = 'block';
-    actionBtn.textContent = '清空';
+    actionBtn.textContent = '-';
     actionBtn.style.backgroundColor = '#f44336';
     actionBtn.removeEventListener('click', showNewEventModal);
     actionBtn.addEventListener('click', handleClearCompletedEvents);

@@ -1,0 +1,16 @@
+steps:
+  - name: Deploy Node.js application
+    run: |
+      # 执行部署步骤,例如将代码复制到服务器,安装依赖项,启动应用程序
+      # ...
+
+  - name: Check deployment status
+    run: |
+      sleep 10 # 等待应用程序启动
+      response=$(curl -s -o /dev/null -w "%{http_code}" https://sssshengu0.github.io)
+      if [[ $response == "200" ]]; then
+        echo "Deployment successful"
+      else
+        echo "Deployment failed"
+        exit 1
+      fi
